@@ -1,0 +1,54 @@
+{
+  "name": "Knowledge World VIP | عالم المعرفة VIP",
+  "short_name": "Knowledge VIP",
+  "description": "An interactive and luxurious quiz application featuring 10 knowledge series, each with 30 timed questions. The app boasts a VIP design with a gold and black theme, dynamic animations, and background music, offering a fun and educational experience in multiple languages.",
+  "id": "/knowledgeworldvip/",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0a",
+  "theme_color": "#D4AF37",
+  "categories": [
+    "education",
+    "games"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.vip.knowledgeworld",
+      "id": "com.vip.knowledgeworld"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=540&h=960&fit=crop&q=80",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Choose Your Category"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=540&h=960&fit=crop&q=80",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Answer Challenging Questions"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=540&h=960&fit=crop&q=80",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Celebrate Your Victory"
+    }
+  ]
+}

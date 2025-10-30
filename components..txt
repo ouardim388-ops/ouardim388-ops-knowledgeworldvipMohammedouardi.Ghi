@@ -1,0 +1,64 @@
+import React, { useState } from 'react';
+import { Language } from '../types';
+import { UI_TEXT } from '../constants';
+
+interface RegistrationScreenProps {
+  onRegister: (name: string, email: string) => void;
+  onBack: () => void;
+  language: Language;
+}
+
+const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegister, onBack, language }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const texts = UI_TEXT[language];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (name.trim() && email.trim()) {
+      onRegister(name.trim(), email.trim());
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen w-screen text-white animate-fadeIn p-4">
+      <h1 className="text-3xl md:text-5xl font-cinzel gold-text-gradient tracking-wider mb-8 text-center">
+        {texts.createAccount}
+      </h1>
+      <div className="vip-panel w-full max-w-sm p-8">
+        <form onSubmit={handleSubmit}>
+          <div className="mb-6">
+            <label htmlFor="name" className={`block text-lg text-yellow-400 mb-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{texts.name}</label>
+            <input
+              id="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className={`w-full bg-gray-800 border-2 border-gray-600 rounded-lg p-3 focus:outline-none focus:border-yellow-400 text-white ${language === 'ar' ? 'text-right' : 'text-left'}`}
+            />
+          </div>
+          <div className="mb-8">
+            <label htmlFor="email" className={`block text-lg text-yellow-400 mb-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{texts.email}</label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className={`w-full bg-gray-800 border-2 border-gray-600 rounded-lg p-3 focus:outline-none focus:border-yellow-400 text-white ${language === 'ar' ? 'text-right' : 'text-left'}`}
+            />
+          </div>
+          <button type="submit" className="vip-button w-full text-xl">
+            {texts.continue}
+          </button>
+        </form>
+      </div>
+      <button onClick={onBack} className="mt-8 text-lg p-3 rounded-lg hover:bg-gray-800/50 transition-colors flex items-center gap-2">
+        <span className={`text-2xl ${language === 'ar' ? '' : 'transform scale-x-[-1]'}`}>&#x21A9;</span> {texts.back}
+      </button>
+    </div>
+  );
+};
+
+export default RegistrationScreen;

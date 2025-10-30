@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Knowledge World VIP | عالم المعرفة VIP",
+  "description": "An interactive and luxurious quiz application featuring 10 knowledge series, each with 30 timed questions. The app boasts a VIP design with a gold and black theme, dynamic animations, and background music, offering a fun and educational experience in multiple languages.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
